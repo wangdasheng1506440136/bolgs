@@ -27,3 +27,5 @@ ul, li { list-style: none; }
 article { width: 1140px; margin: 100px auto 0; overflow: hidden }
 .blank { height: 20px; overflow: hidden; width: 100%; margin: auto; clear: both }
 .container {width: 1140px;margin: 20px auto;}
+.n1 { background: #000; }
+.n2 { background: #3a6ab5; }

@@ -1,5 +1,21 @@
-body {background:#333;}
+body {background:rgb(241, 236, 236);}
 .imginfo { z-index: 9; position: absolute; font-size: 26px; color: #FFF; display: block; overflow: hidden; bottom: 12%; left: 0; right: 0; display: block; background: #00000061; padding: 0 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.picsbox { width: 100%; overflow: hidden; position: relative; }
+.banner { width: 66%; overflow: hidden; float: left }
+.fader { position: relative; width: 100%; padding-top: 60%; font-family: "futura", arial; overflow: hidden; }
+.fader .slide { position: absolute; width: 100%; top: 0; z-index: 1; opacity: 0; height: 100%; }
+.fader .slide img { width: 100%; height: 100%; }
+.fader .prev, .fader .next { position: absolute; height: 80px; line-height: 55px; width: 50px; font-size: 100px; text-align: center; color: #fff; top: 50%; left: 50px; z-index: 4; margin-top: -25px; cursor: pointer; opacity: 0; transition: all 150ms; }
+.fader .next { left: auto; right: 50px; }
+.fader .pager_list { position: absolute; width: 100%; height: 40px; padding: 0; line-height: 40px; bottom: 0; text-align: center; z-index: 4; }
+.fader .pager_list li { display: inline-block; width: 15px; height: 15px; margin: 0 7px; background: #fff; opacity: .3; text-indent: -9999px; border-radius: 999px; cursor: pointer; transition: all 150ms; }
+.fader .pager_list li:hover, .fader .pager_list li.active { opacity: 1; }
+.banner:hover .fader_controls .page.prev { opacity: 0.5; left: 0 }
+.banner:hover .fader_controls .page.next { opacity: 0.5; right: 0 }
+.imginfo { z-index: 9; position: absolute; font-size: 26px; color: #FFF; display: block; overflow: hidden; bottom: 12%; left: 0; right: 0; display: block; background: #00000061; padding: 0 40px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+/*toppic*/
+.toppic { width: 32%; float: right; overflow: hidden; position: relative; }
+.toppic li { width: 100%; background: #000; position: relative; overflow: hidden; }
 .toppic li i { display: block; opacity: 0.7; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; overflow: hidden }
 .toppic li i img {
     width: 100%;
@@ -7,23 +23,54 @@ body {background:#333;}
 }
 .toppic li h2 { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 20px; color: #fff; display: block; font-weight: normal; font-size: 16px; overflow: hidden; background: rgba(0,0,0,0.7); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
 .toppic li span { position: absolute; top: 20px; left: 20px; padding: 6px 10px; background: rgba(0, 0, 0, .7); font-size: 12px; display: block; color: #FFF; border-radius: 3px; }
-.toppic li { width: 100%; background: #000; position: relative; overflow: hidden; }
-.picsbox { width: 100%; overflow: hidden; position: relative; }
-.banner { width: 66%; overflow: hidden; float: left }
-.fader { position: relative; width: 100%; padding-top: 60%; font-family: "futura", arial; overflow: hidden; }
-.fader .slide { position: absolute; width: 100%; top: 0; z-index: 1; opacity: 0; height: 100%; }
-.fader .slide img { width: 100%; height: 100%; }
-.toppic { width: 32%; float: right; overflow: hidden; position: relative; }
+.toppic li:hover i { opacity: 1; }
 .toppic li:last-child { margin-top: 19px }
 .blogsbox { width: 66%; overflow: hidden; float: left }
 .blogs { overflow: hidden; margin-bottom: 20px; padding: 20px; background: #FFF; -webkit-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); -moz-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); -webkit-transition: all 0.6s ease; -moz-transition: all 0.6s ease; -o-transition: all 0.6s ease; transition: all 0.6s ease; }
-.blogs .blogtitle { margin: 0 0 10px 0; font-size: 20px; overflow: hidden; }
 .blogs .blogpic { float: left; width: 30%; max-height: 170px; margin-right: 20px; display: block; overflow: hidden; }
+.blogs .blogpic img { width: 100%; height: auto; -webkit-transition: all 0.6s ease; -moz-transition: all 0.6s ease; -o-transition: all 0.6s ease; transition: all 0.6s ease; margin-bottom: 10px }
+.blogs .blogpic :hover img { transform: scale(1.1) }
+.blogs .blogtitle { margin: 0 0 10px 0; font-size: 20px; overflow: hidden; }
+.blogs .blogtitle a:hover { color: #337ab7; }
 .blogs .blogtext { font-size: 14px; color: #566573; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 3; margin-top: 20px }
 .bloginfo { overflow: hidden; margin-top: 30px }
+.bloginfo ul li { float: left; font-size: 12px; padding: 0 0 0 20px; margin: 0 15px 0 0; color: #748594; line-height: 1.5; display: inline-block; }
+.bloginfo ul li a { color: #748594; }
+.bloginfo ul li a:hover { color: #000 }
 .bloginfo .author { background: url(../images/auicon.jpg) no-repeat 0 0 }
 .bloginfo .lmname { background: url(../images/auicon.jpg) no-repeat top -23px left; }
 .bloginfo .timer { background: url(../images/auicon.jpg) no-repeat top -44px left; }
 .bloginfo .view { background: url(../images/auicon.jpg) no-repeat top -64px left; }
 .bloginfo .like { background: url(../images/auicon.jpg) no-repeat top -85px left; }
 .bloginfo ul li a { color: #748594; }
+.sidebar { width: 32%; overflow: hidden; float: right }
+.sidebar div { padding: 35px 30px; margin-bottom: 20px; background: #FFF; -webkit-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); -moz-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); }
+.hometitle { font-size: 18px; color: #282828; font-weight: 600; margin: 0; text-transform: uppercase; padding-bottom: 15px; margin-bottom: 25px; position: relative; }
+.hometitle:after { content: ""; background-color: #282828; left: 0; width: 50px; height: 2px; bottom: 0; position: absolute; -webkit-transition: 0.5s; -moz-transition: 0.5s; -ms-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s; }
+.zhuanti { overflow: hidden }
+.zhuanti ul { width: 100%; overflow: hidden; display: block; clear: both; }
+.zhuanti li { margin: 0 0 20px 0; overflow: hidden; position: relative; }
+.zhuanti li i { background: #000; display: block }
+.zhuanti img { width: 100%; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; opacity: 0.5 }
+.zhuanti p { position: absolute; top: 30%; left: 0; right: 0; color: #FFF; text-align: center; font-size: 15px; overflow: hidden; margin-top: 5px; padding: 0 40px; }
+.zhuanti p a { color: #fff; }
+.zhuanti span { width: 80px; margin: 10px auto; background: transparent; font-size: 12px; border: 1px solid #FFF; border-radius: 40px; padding: 4px 0; color: #FFF; display: block; clear: both; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -ms-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease; }
+.zhuanti li:hover img { opacity: 0.6 }
+.zhuanti li:hover span { background: #FFF; }
+.zhuanti li:hover span a { color: #333 }
+.guanzhu ul li { font-size: 12px; margin-bottom: 10px; background: #fff; color: #525252; line-height: 40px; padding: 0 0 0 34px; border: 1px solid #DDD; border-radius: 2px; position: relative; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.guanzhu .sina { border: #ec3d51 1px solid; background: url(../images/gzbg.jpg) no-repeat 0 10px }
+.guanzhu .tencent { border: #68a6d6 1px solid; background: url(../images/gzbg.jpg) no-repeat 0 -43px }
+.guanzhu .qq { border: #2ab39a 1px solid; background: url(../images/gzbg.jpg) no-repeat 0 -98px }
+.guanzhu .email { border: #12aae8 1px solid; background: url(../images/gzbg.jpg) no-repeat 0 -150px }
+.guanzhu .wxgzh { border: #199872 1px solid; background: url(../images/gzbg.jpg) no-repeat 0 -200px }
+.guanzhu .wx { overflow: hidden; padding: 0 }
+.guanzhu .wx img { width: 100%; }
+.guanzhu ul li span { float: right; text-align: center; width: 100px; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; transition: all 0.5s; }
+.guanzhu .sina span { background: #ec3d51; }
+.guanzhu .tencent span { background: #68a6d6; }
+.guanzhu .qq span { background: #2ab39a; }
+.guanzhu .email span { background: #12aae8; }
+.guanzhu .wxgzh span { background: #199872; }
+.guanzhu a span { color: #FFF }
+.guanzhu ul li:hover span { width: 120px; }

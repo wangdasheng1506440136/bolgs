@@ -74,3 +74,7 @@ body {background:rgb(241, 236, 236);}
 .guanzhu .wxgzh span { background: #199872; }
 .guanzhu a span { color: #FFF }
 .guanzhu ul li:hover span { width: 120px; }
+h1.t_nav span { float: right; color: #000; }
+h1.t_nav { border-bottom: #bfbfbf 1px solid; font-size: 14px; font-weight: normal; line-height: 40px; width: 100%; overflow: hidden; margin-bottom: 20px }
+.news_infos { float: left; margin-bottom: 20px; width: 66%; background: #fff; -webkit-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); -moz-box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); box-shadow: 0 2px 5px 0 rgba(146, 146, 146, .1); }
+.news_infos ul { padding: 30px 40px; text-align: justify; line-height: 1.8; font-size: 16px; }

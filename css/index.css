@@ -94,4 +94,4 @@ h1.t_nav { border-bottom: #bfbfbf 1px solid; font-size: 14px; font-weight: norma
 .n1, .n2 { width: 100px; display: block; text-align: center; float: left; color: #fff; }
 .ab { background: url(../images/blank.jpg) no-repeat; background-size: cover; background-position: top center; }
 .container { width: 1140px; margin: 20px auto }
-
+.sh { background: url(../images/page_bg.jpg) no-repeat; background-size: cover; background-position: top center; }
